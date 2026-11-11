@@ -276,10 +276,14 @@ export default function App() {
                       
                       <div className="flex flex-wrap items-center gap-2.5 text-base sm:text-xl font-medium text-slate-300">
                         <span className="text-emerald-400 font-semibold font-mono">
-                          Développeur Full Stack
+                          Développeur Full-Stack
                         </span>
                         <span className="text-slate-500">·</span>
-                        <span className="text-slate-300 text-sm sm:text-base font-mono">
+                        <span className="text-cyan-300 font-medium font-mono text-sm sm:text-base">
+                          Concepteur Développeur
+                        </span>
+                        <span className="text-slate-500">·</span>
+                        <span className="text-slate-400 text-sm sm:text-base font-mono">
                           Web, Mobile & Réseau
                         </span>
                       </div>
@@ -515,9 +519,19 @@ export default function App() {
                         <span>Télécharger mon CV</span>
                       </a>
 
+                      <a
+                        href={personalInfo.cvPath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 text-xs sm:text-sm flex items-center gap-2 transition-colors cursor-pointer"
+                      >
+                        <ExternalLink size={15} className="text-cyan-400" />
+                        <span>Aperçu du CV (PDF)</span>
+                      </a>
+
                       <button
                         onClick={() => setCurrentTab('competences')}
-                        className="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm flex items-center gap-2 transition-colors cursor-pointer"
+                        className="px-4 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs sm:text-sm flex items-center gap-2 transition-colors cursor-pointer"
                       >
                         <span>Voir mes compétences</span>
                         <ChevronRight size={15} />
@@ -582,7 +596,7 @@ export default function App() {
                       ))
                     ) : (
                       qualifications.experience.map((item, idx) => (
-                        <div key={idx} className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-1.5">
+                        <div key={idx} className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-2">
                           <div className="flex flex-wrap items-center justify-between gap-2">
                             <h4 className="font-bold text-slate-100 text-sm sm:text-base">{item.title}</h4>
                             <span className="text-xs font-mono px-2 py-0.5 rounded bg-indigo-950/80 text-indigo-300 border border-indigo-800/80">
@@ -595,9 +609,56 @@ export default function App() {
                           <p className="text-xs text-slate-300 leading-relaxed pt-1">
                             {item.description}
                           </p>
+                          {item.missions && (
+                            <ul className="space-y-1 pt-1.5 border-t border-slate-800/80">
+                              {item.missions.map((m, mIdx) => (
+                                <li key={mIdx} className="text-xs text-slate-300 flex items-start gap-2">
+                                  <CheckCircle2 size={13} className="text-emerald-400 shrink-0 mt-0.5" />
+                                  <span>{m}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       ))
                     )}
+                  </div>
+
+                  {/* PROJETS ACADÉMIQUES & LANGUES DU CV */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto pt-4 border-t border-slate-800/80">
+                    <div className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-2.5">
+                      <span className="text-xs font-mono text-emerald-400 block font-semibold">PROJETS ACADÉMIQUES DU CV</span>
+                      {qualifications.academicProjects.map((p, pIdx) => (
+                        <div key={pIdx} className="space-y-1 text-xs">
+                          <div className="font-bold text-slate-200">{p.title}</div>
+                          <p className="text-slate-400 text-[11px] leading-relaxed">{p.description}</p>
+                          <div className="flex flex-wrap gap-1 pt-0.5">
+                            {p.tags.map((t, tIdx) => (
+                              <span key={tIdx} className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-900 border border-slate-800 text-slate-400">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-slate-950 border border-slate-800/80 space-y-3">
+                      <span className="text-xs font-mono text-cyan-400 block font-semibold">LANGUES MAÎTRISÉES</span>
+                      <div className="space-y-2">
+                        {personalInfo.languages.map((l, lIdx) => (
+                          <div key={lIdx} className="flex items-center justify-between text-xs">
+                            <span className="text-slate-200 font-medium">{l.name}</span>
+                            <span className="font-mono text-slate-400 text-[11px] bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                              {l.level}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400">
+                        Capacité à collaborer et travailler au sein d'équipes locales et internationales.
+                      </div>
+                    </div>
                   </div>
 
                 </div>

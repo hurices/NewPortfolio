@@ -1,70 +1,101 @@
 /**
- * Données du portfolio de Hurices Razanadraibe
- * Projets réels, code testé et parcours de développement.
+ * Données officielles du portfolio de Hurices Razanadraibe
+ * Synchronisées avec son CV professionnel :
+ * Razanadraibe Tsihoarana Mampionintsoa Hurices
+ * Développeur Full-Stack & Concepteur Développeur
  */
 
 export const personalInfo = {
   name: "Hurices Razanadraibe",
+  fullName: "Razanadraibe Tsihoarana Mampionintsoa Hurices",
   preferredName: "Hurices",
   username: "hurices",
-  title: "Développeur Full Stack",
+  title: "Développeur Full-Stack",
+  secondaryTitle: "Concepteur Développeur",
   subtitle: "Web, Mobile & Réseau",
-  tagline: "Développeur Full Stack passionné : je conçois des applications web modernes, des architectures réseau sécurisées et des outils mobiles.",
-  bio: "Salut ! Je suis Hurices, développeur Full Stack basé à Majunga. Passionné par l'informatique depuis des années, j'aime construire des projets concrets de A à Z : des interfaces web réactives avec React et Tailwind CSS, des backends fiables en Node.js et Python, des applications Android natives en Kotlin et des outils réseau comme NetCap. J'accorde une vraie importance à la clarté du code, aux performances et à l'expérience utilisateur.",
-  location: "Majunga, Madagascar",
-  email: "anthonyarzel923@gmail.com",
+  tagline: "Développeur Full-Stack & Concepteur Développeur passionné par la conception d'applications web réactives, de solutions SaaS et d'outils réseau.",
+  bio: "Salut ! Je suis Hurices Razanadraibe, Développeur Full-Stack et Concepteur Développeur basé à Majunga. Fort de mes expériences chez Gasikara Digital (développement d'applications SaaS) et à la Chocolaterie ROBERT (déploiement ERP Odoo & administration), je conçois des solutions logicielles complètes : interfaces réactives (React, TypeScript), backends robustes (Node.js, Python, PHP) et architectures réseau sécurisées (NetCap). J'accorde une réelle importance à la performance, au code propre et au travail d'équipe.",
+  location: "Lot 33 plle113 Mabibokely, Majunga",
+  email: "huricesrazanandraibe@gmail.com",
   phone: "+261 33 35 436 81",
   githubUrl: "https://github.com/hurices",
   linkedinUrl: "https://www.linkedin.com/in/hurices-razanadraibe-3b1b67433",
   avatarUrl: "/assets/hurices_profile.jpg",
   cvPath: "/CV_Dev.pdf",
-  status: "Disponible pour missions & opportunités",
+  status: "Disponible pour opportunités & missions",
   stats: [
     { label: "Dépôts GitHub", value: "11+", detail: "Dépôts publics & projets réels" },
     { label: "Technologies", value: "15+", detail: "Web, Réseau, Mobile & Outils" },
     { label: "Code & Pratique", value: "100%", detail: "Projets testés et opérationnels" },
-    { label: "Spécialité", value: "Full Stack", detail: "React, Node, Python, Kotlin" }
+    { label: "Spécialité", value: "Full-Stack", detail: "React, Node, Python, Odoo" }
+  ],
+  languages: [
+    { name: "Français", level: "Langue courante", stars: 5 },
+    { name: "Anglais", level: "Niveau courant", stars: 4 },
+    { name: "Malgache", level: "Langue maternelle", stars: 5 }
   ]
 };
 
 export const qualifications = {
   education: [
     {
-      title: "Formation Supérieure en Informatique",
-      subtitle: "Génie Logiciel & Systèmes d'Information",
-      period: "Cursus Supérieur",
-      description: "Approfondissement en architectures logicielles, conception client-serveur, sécurité réseau, algorithmique et bases de données relationnelles / NoSQL.",
+      title: "Licence Informatique",
+      subtitle: "Institut de Formation Technique (IFT)",
+      period: "2023 - En cours",
+      description: "Approfondissement en architectures logicielles, génie logiciel, algorithmique avancée, réseaux et gestion de bases de données relationnelles / NoSQL.",
       badge: "Formation"
     },
     {
-      title: "Cursus Fondamental en Développement Logiciel",
-      subtitle: "Bases de la Programmation & Réseaux",
-      period: "Cycle Fondamental",
-      description: "Apprentissage des paradigmes de programmation (orienté objet, fonctionnel), structures de données, développement web et protocoles réseaux.",
-      badge: "Validé"
+      title: "Diplôme de Technicien Supérieur (DTS)",
+      subtitle: "Institut de Formation Technique (IFT)",
+      period: "2024",
+      description: "Conception logicielle, modélisation de systèmes d'information, programmation structurée et développement d'applications d'entreprise.",
+      badge: "Diplômé"
+    },
+    {
+      title: "Diplôme de Baccalauréat",
+      subtitle: "Enseignement Général",
+      period: "2023",
+      description: "Formation scientifique et logique mathématique ayant préparé au cursus supérieur en sciences informatiques.",
+      badge: "Obtenu"
     }
   ],
   experience: [
     {
-      title: "Développeur Full Stack & Chargé de projet",
-      subtitle: "Chocolaterie Robert & GasikaraDigital",
-      period: "2025",
-      description: "Conception et réalisation d'outils de gestion interne et de tableaux de bord SaaS. Développement d'APIs REST, intégration d'interfaces réactives et suivi technique.",
-      badge: "Professionnel"
-    },
-    {
-      title: "Développeur Logiciel & Planification",
-      subtitle: "Projets Collaboratifs & Clients",
+      title: "Développeur Logiciel",
+      subtitle: "Gasikara Digital",
       period: "2024",
-      description: "Élaboration des spécifications fonctionnelles et techniques, modélisation des flux de données et développement de prototypes modulaires.",
-      badge: "Collaboration"
+      description: "Développement et maintenance d'applications SaaS innovantes. Collaboration active au sein d'équipes multidisciplinaires et optimisation des performances du site.",
+      badge: "Professionnel",
+      missions: [
+        "Développement et maintenance d'applications SaaS",
+        "Collaboration active au sein d'équipes multidisciplinaires",
+        "Optimisation des performances techniques et de l'expérience utilisateur"
+      ]
     },
     {
-      title: "Développeur Réseau & Systèmes R&D",
-      subtitle: "Projets Open Source & GitHub",
-      period: "2023 - 2024",
-      description: "Création de NetCap (serveur proxy TCP et détection statistique d'intrusions), d'applications mobiles Android (IMmOaR) et d'utilitaires Linux.",
-      badge: "Open Source"
+      title: "Stagiaire Informatique & ERP",
+      subtitle: "Chocolaterie ROBERT",
+      period: "2023",
+      description: "Participation à l'intégration et au paramétrage des modules d'Odoo (Gestion des stocks, Ventes ou Production) pour centraliser et automatiser les flux d'activité de la chocolaterie. Administration du système informatique et maintenance des données.",
+      badge: "Stage",
+      missions: [
+        "Déploiement ERP (Odoo) : paramétrage des modules Stocks, Ventes et Production",
+        "Automatisation et centralisation des flux opérationnels de l'entreprise",
+        "Maintenance et gestion des données informatiques internes"
+      ]
+    }
+  ],
+  academicProjects: [
+    {
+      title: "Architecture d'applications temps réel",
+      description: "Développement complet d'une plateforme de discussion locale hautement réactive en utilisant TypeScript / PHP, intégrant la gestion des requêtes asynchrones et la mise en cache des données.",
+      tags: ["TypeScript", "PHP", "Temps Réel", "Cache"]
+    },
+    {
+      title: "Développement d'outils de surveillance réseau (NetCap)",
+      description: "Conception et implémentation de scripts et d'outils d'analyse de trafic (Python / TypeScript) pour la détection d'anomalies (Z-Score) et la sécurisation des infrastructures.",
+      tags: ["Python", "FastAPI", "Pandas", "Proxy TCP", "Sécurité"]
     }
   ]
 };
@@ -77,45 +108,45 @@ export const skillsAccordionData = [
     icon: "Layout",
     skills: [
       { name: "React & Next.js", level: 92 },
-      { name: "JavaScript Moderne (ES6+)", level: 94 },
+      { name: "TypeScript & JavaScript Moderne", level: 94 },
       { name: "Tailwind CSS & Animations", level: 90 },
       { name: "HTML5 / CSS3 / Responsive Design", level: 95 }
     ]
   },
   {
     id: "backend",
-    title: "Développement Backend",
-    subtitle: "Serveurs fiables, APIs & logique métier",
+    title: "Développement Backend & ERP",
+    subtitle: "Serveurs fiables, APIs & intégration Odoo",
     icon: "Server",
     skills: [
       { name: "Node.js & Express", level: 90 },
       { name: "Python (FastAPI, Flask)", level: 88 },
-      { name: "Conception d'APIs RESTful", level: 92 },
-      { name: "PHP & Sessions sécurisées", level: 80 }
+      { name: "PHP & Sessions sécurisées", level: 85 },
+      { name: "ERP Odoo (Stocks, Ventes, Production)", level: 82 }
     ]
   },
   {
     id: "network",
-    title: "Réseau, Sécurité & Données",
+    title: "Réseau, Sécurité & Systèmes",
     subtitle: "Analyse de trafic, proxy & systèmes Linux",
     icon: "Shield",
     skills: [
-      { name: "Analyse statistique Z-Score (Pandas)", level: 88 },
-      { name: "Proxy TCP / HTTP & Interception", level: 90 },
+      { name: "Analyse statistique Z-Score (Pandas, NumPy)", level: 88 },
+      { name: "Proxy TCP / HTTP & Interception réseau", level: 90 },
       { name: "Administration Linux & Scripts Bash", level: 85 },
-      { name: "Supervision & Diagnostic réseau", level: 84 }
+      { name: "Sécurité & Audit d'infrastructures", level: 84 }
     ]
   },
   {
     id: "tools",
-    title: "Mobile, Données & Outils Dev",
+    title: "Mobile, BDD & Outils Dev",
     subtitle: "Android natif, bases de données & Git",
     icon: "Terminal",
     skills: [
       { name: "Kotlin (Android Native MVVM)", level: 80 },
       { name: "Git, GitHub & Versioning", level: 92 },
       { name: "Bases de données (SQL & MongoDB)", level: 85 },
-      { name: "Docker & Environnements de dev", level: 78 }
+      { name: "Docker & Déploiement SaaS", level: 78 }
     ]
   }
 ];
@@ -127,7 +158,7 @@ export const projects = [
     category: "network",
     categoryLabel: "Sécurité & Réseau",
     summary: "Système complet de portail captif et d'analyse de trafic avec détection d'anomalies en temps réel via Z-score.",
-    description: "NetCap est un projet que j'ai développé pour sécuriser et analyser les flux sur un réseau local. Il combine un proxy TCP thread-safe qui intercepte le trafic HTTP, un portail d'authentification Flask, un pipeline d'analyse de données avec Pandas calculant des Z-scores pour repérer les anomalies et une API FastAPI accompagnée d'un dashboard de supervision en direct.",
+    description: "NetCap est un projet que j'ai développé pour sécuriser et analyser les flux sur un réseau local. Il combine un proxy TCP thread-safe qui intercepte le trafic HTTP, un portail d'authentification Flask, un pipeline d'analyse statistique avec Pandas calculant des Z-scores pour repérer les anomalies et une API FastAPI accompagnée d'un dashboard de supervision en direct.",
     tech: ["Python", "FastAPI", "Pandas", "NumPy", "Flask", "Proxy TCP"],
     image: "/assets/hurices_profile.jpg",
     githubUrl: "https://github.com/hurices/NETCAP",
